@@ -1,8 +1,9 @@
 package com.sample;
 
 public class Service {
+    Client client = new Client();
+
     public void startClient() {
-        Client client = new Client();
         if (client.getStatus() == Client.State.OFF) {
             client.start();
         }

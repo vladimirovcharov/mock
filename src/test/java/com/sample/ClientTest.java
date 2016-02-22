@@ -32,6 +32,8 @@ public class ClientTest {
         Client mock = spy(client);
 
         Service service = new Service();
+        Whitebox.setInternalState(service, "client", mock);
+
         service.startClient();
         service.startClient();
         service.startClient();
